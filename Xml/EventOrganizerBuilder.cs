@@ -22,7 +22,8 @@ namespace EventbriteNET.Xml
 
             var doc = new XmlDocument();
             doc.LoadXml(xmlString);
-
+            //doc.Save("D:\\events.xml");
+            
             toReturn.Id = long.Parse(doc.GetElementsByTagName("id")[0].InnerText);
             toReturn.Name = doc.GetElementsByTagName("name")[0].InnerText;
             toReturn.Description = doc.GetElementsByTagName("description")[0].InnerText;

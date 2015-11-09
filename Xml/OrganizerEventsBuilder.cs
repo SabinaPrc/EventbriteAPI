@@ -19,7 +19,8 @@ namespace EventbriteNET.Xml
 
             var doc = new XmlDocument();
             doc.LoadXml(xmlString);
-            //doc.Save("D:\\events.xml");
+            doc.Save("D:\\events.xml");
+
             var events = doc.GetElementsByTagName("event");
             var builder = new EventBuilder(this.Context);
             foreach (XmlNode eventNode in events)
